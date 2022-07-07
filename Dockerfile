@@ -12,7 +12,8 @@ RUN install2.r --error \
     Tplyr \
     huxtable \
     flextable \
-    bookdown \
-  && R -e "remotes::install_github('insightsengineering/random.cdisc.data')" \
+    bookdown
+
+RUN R -e "remotes::install_github('insightsengineering/random.cdisc.data')" \
   && R -e "remotes::install_github('insightsengineering/nestcolor')" \
   && R -e "remotes::install_github('insightsengineering/tern')"
