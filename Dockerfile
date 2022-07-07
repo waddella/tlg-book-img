@@ -9,11 +9,9 @@ RUN install2.r --error \
     --deps TRUE \
     rtables \
     gt \
-    flextable \
     Tplyr \
     huxtable \
     flextable \
-    NNtable \
     bookdown \
   && R -e "remotes::install_github('insightsengineering/random.cdisc.data')" \
   && R -e "remotes::install_github('insightsengineering/nestcolor')" \
