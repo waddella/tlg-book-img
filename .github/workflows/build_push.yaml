@@ -32,5 +32,3 @@ jobs:
           context: .
           push: true
           tag: latest
-        secrets:
-          REPO_GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
