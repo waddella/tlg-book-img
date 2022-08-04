@@ -12,8 +12,9 @@ RUN install2.r --error \
     Tplyr \
     huxtable \
     flextable \
-    bookdown
-
-RUN R -e "remotes::install_github('insightsengineering/random.cdisc.data')" \
-  && R -e "remotes::install_github('insightsengineering/nestcolor')" \
-  && R -e "remotes::install_github('insightsengineering/tern')"
+    bookdown \
+    yaml \
+    checkmate \
+  &&  R -e "remotes::install_github('insightsengineering/random.cdisc.data', repos = c('CRAN' = 'https://cloud.r-project.org/')))" \
+  && R -e "remotes::install_github('insightsengineering/nestcolor', repos = c('CRAN' = 'https://cloud.r-project.org/')))" \
+  && R -e "remotes::install_github('insightsengineering/tern', repos = c('CRAN' = 'https://cloud.r-project.org/'))"
